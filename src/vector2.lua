@@ -54,4 +54,11 @@ function Vector.unit(v1)
     return v1
 end
 
+function Vector.rotate(v1, rad)
+    local v = {}
+    v.x = v1.x * math.cos(rad) - v1.y * math.sin(rad)
+    v.y = v1.x * math.sin(rad) + v1.y * math.cos(rad)
+    return v
+end
+
 return Vector
