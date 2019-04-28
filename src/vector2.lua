@@ -42,4 +42,16 @@ function Vector.divide(v1, s1)
     return v
 end
 
+function Vector.length(v1)
+    return math.sqrt(math.pow(v1.x, 2) + math.pow(v1.y, 2))
+end
+
+function Vector.unit(v1)
+    local length = v1:length()
+    if length > 0 then
+        return v1:divide(length)
+    end
+    return v1
+end
+
 return Vector
