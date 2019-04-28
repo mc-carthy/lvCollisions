@@ -73,4 +73,13 @@ function Vector.angle(v1, v2)
     return math.acos(Vector.dotProduct(u1, u2))
 end
 
+function Vector.project(project, onto)
+    local ontoLenSqr = onto:dotProduct(onto)
+    if ontoLenSqr > 0 then
+        local dotProd = project:dotProduct(onto)
+        return onto:multiply(dotProd / ontoLenSqr)
+    end
+    return onto
+end
+
 return Vector
