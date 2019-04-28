@@ -1,7 +1,9 @@
 local Vector = {}
 
+Vector.__index = Vector
+
 function Vector.new(x, y)
-    local v = {}
+    local v = setmetatable({}, Vector)
     v.x = x
     v.y = y
     return v
