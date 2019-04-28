@@ -1,5 +1,7 @@
-function love.load()
+local Vector = require('src.vector2')
 
+function love.load()
+    
 end
 
 function love.update(dt)
