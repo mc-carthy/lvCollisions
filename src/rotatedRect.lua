@@ -1,6 +1,6 @@
-local Rect = {}
+local RotatedRect = {}
 
-Rect.__index = Rect
+RotatedRect.__index = RotatedRect
 -- NOTE: Origin is centre of rectangle by default, consider 
 -- overloaded constructor to set origin as top-left corner
 
@@ -8,12 +8,12 @@ Rect.__index = Rect
 --  Vector2 centre
 --  Vector2 halfExtents
 --  float rotation
-function Rect.new(centre, halfExtents, rotation)
-    local r = setmetatable({}, Rect)
+function RotatedRect.new(centre, halfExtents, rotation)
+    local r = setmetatable({}, RotatedRect)
     r.centre = centre
     r.halfExtents = halfExtents
     r.rotation = rotation
     return r
 end
 
-return Rect
+return RotatedRect
