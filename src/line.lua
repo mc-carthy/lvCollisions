@@ -37,7 +37,7 @@ local function equivalentLines(l1, l2)
     return parallelVectors(diff, l1.direction)
 end
 
-function Line.linesCollide(l1, l2)
+function Line.lineCollision(l1, l2)
     if parallelVectors(l1.direction, l2.direction) then
         return equivalentLines(l1, l2)
     else
