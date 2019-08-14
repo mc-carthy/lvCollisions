@@ -40,7 +40,7 @@ local function overlapping(minA, maxA, minB, maxB)
 end
 
 local function overlappingRanges(r1, r2)
-    return overlapping(r1.minumum, r1.maximum, r2.minimum, r2.maximum)
+    return overlapping(r1.minimum, r1.maximum, r2.minimum, r2.maximum)
 end
 
 local function parallelVectors(v1, v2)
